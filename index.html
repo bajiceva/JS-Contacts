@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Ivana</title>
+        <meta name="description" content="">
+
+        <link rel="stylesheet" href="build/css/style.css">
+    </head>
+    <body>
+
+    	<div class="addressbook-container clearfix">
+    		<select name="sort" class="sort-select" data-sort-collection>
+    			<option value="firstName">Sort by name</option>
+    			<option value="lastName">Sort by last name</option>
+    			<option value="years">Sort by years</option>
+    		</select>
+
+    		<input type="text" class="search-input" placeholder="Search by name..." data-search-contacts>
+    		<ul class="addressbook-list" data-contacts-list>
+    		</ul>
+
+			<div class="addressbook-main">
+				<table class="contact-details" data-contact-detail>
+				</table>
+				<form class="add-form" data-add-form>
+					<label for="firstName">First name *</label>
+					<input type="text" id="firstName" name="firstName" /><br>
+					<label for="lastName">Last name *</label>
+					<input type="text" id="lastName" name="lastName" /><br>
+					<label for="phoneNumber">Phone number *</label>
+					<input type="text" id="phoneNumber" name="phoneNumber" /><br>
+					<label for="address">Address</label>
+					<input type="text" id="address" name="address" /><br>
+					<label for="gender">Gender</label>
+					<input type="radio" id="gender" name="gender" value="male" checked>Male
+					<input type="radio" id="gender" name="gender" value="female">Female<br>
+					<label for="years">Years</label>
+					<input type="text" id="years" name="years" /><br>
+					<button type="submit">Save</button>
+				</form>
+			</div>
+
+			<a href="#add" class="add-button"><button>Add</button></a>
+    	</div>
+
+    	<div class="charts">
+    		<h1>Chart</h1>
+    		<canvas id="chart"></canvas>
+    	</div>
+
+    	<script id="detailTemplate" type="text/template">
+			<% for (var key in fields) { %>
+				<tr>
+					<td><%= labels[key] %></td>
+					<% if (key === 'gender') { %>
+						<td>
+							<span class="value"><%= fields[key] %></span>
+							<div class="editable">
+								<input type="radio" name="<%= key %>" value="male" id="maleRadio" <%= (fields.gender === 'male') ? "checked" : "" %>>
+								<label for="maleRadio">Male</label>
+								<input type="radio" name="<%= key %>" value="female" id="femaleRadio" <%= (fields.gender === 'female') ? "checked" : "" %>>
+								<label for="femaleRadio">Female</label>
+							</div>		
+						</td>
+					<% } else { %>
+						<td>
+							<span class="value"><%= fields[key] %></span>
+							<div class="editable">
+								<input type="text" name="<%= key %>" value="<%= fields[key] %>">
+							</div>		
+						</td>
+					<% } %>
+				</tr>
+			<% } %>
+
+			<tr class="controlButtons">
+				<td><button type="button" class="edit">Edit</button></td>
+				<td><button type="button" class="delete">Delete</button></td>
+			</tr>
+
+			<tr class="editButtons">
+				<td><button type="submit" class="saveChanges">Save</button></td>
+				<td><button type="reset" class="cancel">Cancel</button></td>
+			</tr>
+    	</script>
+
+        <!-- javascript -->
+		<script src="build/js/index.js"></script>
+    </body>
+</html>

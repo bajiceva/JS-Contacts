@@ -1,0 +1,42 @@
+[
+	{
+		"firstName": "Marko",
+		"lastName": "Markovic",
+		"phoneNumber": "111222",
+		"address": "Dusana Radovica 2",
+		"gender": "male",
+		"years": 32
+	},
+	{
+		"firstName": "Dragan",
+		"lastName": "Andjelkovic",
+		"phoneNumber": "123456",
+		"address": "Ustanicka 23",
+		"gender": "male",
+		"years": 33
+	},
+	{
+		"firstName": "Pera",
+		"lastName": "Sreckovic",
+		"phoneNumber": "564151",
+		"address": "Kneza Milosa 12",
+		"gender": "male",
+		"years": 29
+	},
+	{
+		"firstName": "Milica",
+		"lastName": "Ivanovic",
+		"phoneNumber": "132658",
+		"address": "Vojvode Stepe 123",
+		"gender": "female",
+		"years": 27
+	},
+	{
+		"firstName": "Ana",
+		"lastName": "Peric",
+		"phoneNumber": "339852",
+		"address": "Bulevar oslobodjenja 45",
+		"gender": "female",
+		"years": 25
+	}
+]
