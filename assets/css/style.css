@@ -95,6 +95,13 @@ ul, ol, li, dl, dt, dd {
 	left: 0;
 }
 
+.container img {
+	position: absolute;
+	width: 50px;
+	right: 0;
+	top: 5px;
+}
+
 .search-input {
 	position: absolute;
 	top: -30px;
