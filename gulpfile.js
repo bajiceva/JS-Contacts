@@ -1,9 +1,3 @@
-// task za minifikovajne css-a
-// task za web server
-// task za optimizaciju slika
-// task za minifikovanje js-a
-// istraziti sta je browserify/requirejs/webpack
-// local storage
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var livereload = require('gulp-livereload');

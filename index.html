@@ -7,48 +7,54 @@
         <title>Ivana</title>
         <meta name="description" content="">
 
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- my css -->
         <link rel="stylesheet" href="build/css/style.css">
+        
     </head>
     <body>
 
-    	<div class="addressbook-container clearfix">
-    		<select name="sort" class="sort-select" data-sort-collection>
-    			<option value="firstName">Sort by name</option>
-    			<option value="lastName">Sort by last name</option>
-    			<option value="years">Sort by years</option>
-    		</select>
+    	<div class="container-fluid">
+	    	<div class="addressbook-container clearfix">
+	    		<select name="sort" class="sort-select" data-sort-collection>
+	    			<option value="firstName">Sort by name</option>
+	    			<option value="lastName">Sort by last name</option>
+	    			<option value="years">Sort by years</option>
+	    		</select>
 
-			<div class="container">
-    			<img src="build/img/logo.png" alt="Adresar">
-    		</div>
+				<div class="container">
+	    			<img src="build/img/logo.png" alt="Adresar">
+	    		</div>
 
-    		<input type="text" class="search-input" placeholder="Search by name..." data-search-contacts>
-    		<ul class="addressbook-list" data-contacts-list>
-    		</ul>
+	    		<input type="text" class="search-input" placeholder="Search by name..." data-search-contacts>
+	    		<ul class="addressbook-list" data-contacts-list>
+	    		</ul>
 
-			<div class="addressbook-main">
-				<table class="contact-details" data-contact-detail>
-				</table>
-				<form class="add-form" data-add-form>
-					<label for="firstName">First name *</label>
-					<input type="text" id="firstName" name="firstName" /><br>
-					<label for="lastName">Last name *</label>
-					<input type="text" id="lastName" name="lastName" /><br>
-					<label for="phoneNumber">Phone number *</label>
-					<input type="text" id="phoneNumber" name="phoneNumber" /><br>
-					<label for="address">Address</label>
-					<input type="text" id="address" name="address" /><br>
-					<label for="gender">Gender</label>
-					<input type="radio" id="gender" name="gender" value="male" checked>Male
-					<input type="radio" id="gender" name="gender" value="female">Female<br>
-					<label for="years">Years</label>
-					<input type="text" id="years" name="years" /><br>
-					<button type="submit">Save</button>
-				</form>
-			</div>
+				<div class="addressbook-main">
+					<table class="contact-details" data-contact-detail>
+					</table>
+					<form class="add-form" data-add-form>
+						<label for="firstName">First name *</label>
+						<input type="text" id="firstName" name="firstName" /><br>
+						<label for="lastName">Last name *</label>
+						<input type="text" id="lastName" name="lastName" /><br>
+						<label for="phoneNumber">Phone number *</label>
+						<input type="text" id="phoneNumber" name="phoneNumber" /><br>
+						<label for="address">Address</label>
+						<input type="text" id="address" name="address" /><br>
+						<label for="gender">Gender</label>
+						<input type="radio" id="gender" name="gender" value="male" checked>Male
+						<input type="radio" id="gender" name="gender" value="female">Female<br>
+						<label for="years">Years</label>
+						<input type="text" id="years" name="years" /><br>
+						<button type="submit">Save</button>
+					</form>
+				</div>
 
-			<a href="#add" class="add-button"><button>Add</button></a>
-    	</div>
+				<a href="#add" class="btn btn-primary">Add</a>
+	    	</div>
+	    </div>
 
     	<div class="charts">
     		<h1>Chart</h1>
@@ -93,5 +99,6 @@
 
         <!-- javascript -->
 		<script src="build/js/index.js"></script>
+		
     </body>
 </html>
